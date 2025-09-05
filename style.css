@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: "Poppins",'Trebuchet MS';
+  background: #4aa1f8;
+  color: #333;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111827;
+}
+#prevPage,
+#nextPage {
+  min-width: 80px;
+  font-weight: 600;
+}
+.panel {
+  background: #48a2fd;
+  padding: 20px;
+  border-right: 1px solid #a51355;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+  overflow-y: auto;
+}
+
+.place {
+  padding: 12px;
+  border: 1px solid #a51355;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #48a2fd; 
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+h2::before {
+  content: "📍";
+  font-size: 20px;
+}
+
+/*Layout*/
+.app {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  height: 100vh;
+}
+
+#logo {
+  border-radius: 20px;
+  border: 2px solid #a51355;
+  box-shadow: 0 2px 8px rgba(74, 161, 248, 0.12);
+}
+.panel {
+  background: #6fb4f9;
+  padding: 20px;
+  border-right: 1px solid #a51355;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+  overflow-y: auto;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+input, select, button {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #a51355;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+input:focus, select:focus {
+  border-color: #ea09c5;
+  box-shadow: 0 0 4px rgba(182, 18, 130, 0.687);
+}
+
+button {
+  background: #ea09c5;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #ea09c5;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background: #fff;
+  cursor: not-allowed;
+}
+
+/*Filters Row*/
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Checkbox chip */
+.chip {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #a51355;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.chip:hover {
+  background: #fff;
+}
+
+/*Status */
+#status {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/*Results List*/
+#results {
+  margin-top: 10px;
+}
+
+.place {
+  padding: 12px;
+  border: 1px solid #a51355;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.place:hover {
+  background: #48a2fd;
+  border-color: #ea09c5;
+  transform: translateY(-2px);
+}
+
+.place h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 12px;
+}
