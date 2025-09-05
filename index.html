@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cafe Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="panel">
+      <img id="logo" src="logo.png" alt="Cafe Quest Logo" style="width:140px; display:block; margin:0 auto 16px;" />
+
+      <div class="row">
+        <input id="searchInput" placeholder="Search area… (try a city, landmark)" />
+      </div>
+
+      <div class="row">
+        <button id="locateBtn" title="Use current location">Use My Location</button>
+      </div>
+
+      <div class="row">
+        <select id="radius">
+          <option value="500">500 m</option>
+          <option value="1000" selected>1 km</option>
+          <option value="2000">2 km</option>
+          <option value="3000">3 km</option>
+        </select>
+        <label class="chip"><input type="checkbox" id="openNow"> Open now</label>
+      </div>
+
+      <div class="row">
+        <select id="minRating">
+          <option value="0" selected>Any rating</option>
+          <option value="3.5">3.5+</option>
+          <option value="4.0">4.0+</option>
+          <option value="4.5">4.5+</option>
+        </select>
+        <select id="maxPrice">
+          <option value="4" selected>Any price</option>
+          <option value="3">Up to 2000</option>
+          <option value="2">Up to 1500</option>
+          <option value="1">Up to 1000</option>
+          <option value="0">Free</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <input id="keyword" placeholder="Keyword filter (e.g., latte, wifi)" />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <div class="row muted" id="status">Ready.</div>
+
+      <div id="results"></div>
+
+      <div class="row" style="justify-content: space-between;">
+        <button id="prevPage" disabled>Prev</button>
+        <button id="nextPage" disabled>Next</button>
+      </div>
+    </aside>
+    <main id="map"></main>
+  </div>
+<script src="script.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1UOUpowcbnoduzQ9z6eajYOb2Cmk71AQ&callback=initMap&v=weekly"
+    async defer></script>
+</body>
+</html>
