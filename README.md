@@ -44,12 +44,11 @@ Writing clean, maintainable, and well-documented code
 
 📂 Project Structure
 CafeQuest/
+
 │── index.html 
+
 │── styles.css
+
 │── script.js      
-│── logo           
 
-🌐 Deployment
-
-This project is deployed on Netlify:
-👉 https://cafequestbysadia.netlify.app/
+│── logo          
